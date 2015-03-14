@@ -1,10 +1,72 @@
 // Use Compass ('cause it rocks!)
 @import "compass";
 
-#lista{background-color:blue;}
 @import "modules/all";
 @import "buttons";
 @import "figures";
 @import "grids";
 @import "reset";
 @import "typography";
+
+body{
+	background-color:#383838;
+}
+.mainwrapper{
+	position:relative;
+}
+
+.center{
+	width:96%;
+	padding:0 2% 0 2%;
+	margin:auto;
+}
+
+main>section {	
+}
+
+h1,h2{
+	text-align:center;
+}
+
+
+
+.parallax_img1{
+	background-image: url("../images/lapices.jpg");
+}
+
+.parallax_img2{
+	background-image: url("../images/landcape.jpg");
+	
+}
+
+.parallax_img3{
+	background-image: url("../images/ojo.jpg");
+}
+
+.parallax{
+	height:100vh;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	@include background-size(cover);
+}
+
+main>section:nth-child(1)>article{
+	padding-top:150px;
+}
+h1{
+	font-family: $fuente-primaria;
+	font-size: 5em;
+	font-weight: bold;
+	color: $blanco-suave;
+	text-shadow: .5px .5px $blanco-tenue;
+	letter-spacing:0.2em;
+
+	span{
+		display:inline-block;
+		padding:0.2em 0.5em;
+		border-style:solid;
+		border-color:$blanco-suave;
+		border-width:0.2em;
+	}
+}
